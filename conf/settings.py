@@ -117,14 +117,20 @@ WSGI_APPLICATION = 'conf.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'bengkel',    # Ganti dengan nama database yang Anda inginkan
-        'USER': 'root',    # Ganti dengan nama pengguna MySQL
-        'PASSWORD': '',  # Ganti dengan password MySQL
-        'HOST': 'localhost',        # Host MySQL, bisa berbeda tergantung setup Anda
-        'PORT': '3306',             # Port MySQL, default adalah 3306
+        'ENGINE': 'django.db.backends.sqlite3',  # Gunakan backend SQLite
+        'NAME': BASE_DIR / 'db.sqlite3',         # Nama file database
     }
 }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'bengkel',    # Ganti dengan nama database yang Anda inginkan
+#         'USER': 'root',    # Ganti dengan nama pengguna MySQL
+#         'PASSWORD': '',  # Ganti dengan password MySQL
+#         'HOST': 'localhost',        # Host MySQL, bisa berbeda tergantung setup Anda
+#         'PORT': '3306',             # Port MySQL, default adalah 3306
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
